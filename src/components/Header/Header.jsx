@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import style from './Header.module.css'; // Импортируем CSS-модули
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 const Header = () => {
 
@@ -8,7 +10,7 @@ const Header = () => {
   const renderContent = () => {
     if (activeTab === 'flight') {
       return <FlightTab />;
-    } else {
+    } else { 
       return <HotelTab />;
     }
   };
@@ -96,11 +98,57 @@ const Header = () => {
 };
 
 const FlightTab = () => {
-  return <div>Контент для рейсов</div>;
+  const [dateRange, setDateRange] = useState([null, null]);
+  const [startDate, endDate] = dateRange;
+
+  return (
+    <div>
+      <form action='' method=''>
+        <label htmlFor="direction">Откуда-куда</label>
+        <input id="direction" type='text' name='direction'></input>
+        
+        <label htmlFor="type_of_trip">Тип рейса
+          <select>
+            <option>Чартер</option>
+            <option>Прямой</option>
+            <option>Транзит</option>
+            <option>Стыковочный</option>
+          </select>
+        </label>
+
+        <div>
+          <label htmlFor="date_range" className={style.dateR}>Дата рейса</label>
+          <DatePicker
+            id="date_range"
+            selectsRange
+            startDate={startDate}
+            endDate={endDate}
+            onChange={(update) => {
+              setDateRange(update);
+            }}
+            isClearable
+            placeholderText=""
+          />
+        </div>
+        
+        <label htmlFor="type_of_trip">Тип рейса
+          <select>
+            <option>Чартер</option>
+            <option>Прямой</option>
+            <option>Транзит</option>
+            <option>Стыковочный</option>
+          </select>
+        </label>
+
+      </form>
+    </div>
+  );
 };
 
 const HotelTab = () => {
-  return <div>Контент для отелей</div>;
+  return (
+  <div>Контент для отелей</div>
+);
 };
 
 export default Header;
