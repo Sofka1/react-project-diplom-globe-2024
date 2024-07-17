@@ -10,6 +10,9 @@
   background-image: url('./image/fonImage.png'); 
   background-repeat: no-repeat round;
   background-position: initial;
+
+  background-color: #FAFBFC;
+
 }
 
 .mainBlock{
@@ -193,7 +196,7 @@
 
 .dateR{
   background-color: red;
-  max-width: 400px;
+  max-width: 400px; 
 }
 
 

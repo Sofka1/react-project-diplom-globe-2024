@@ -11,7 +11,7 @@ const Header = () => {
     if (activeTab === 'flight') {
       return <FlightTab />;
     } else { 
-      return <HotelTab />;
+      return <HotelTab />; 
     }
   };
 
