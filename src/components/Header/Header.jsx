@@ -41,7 +41,7 @@ const Header = () => {
             <img className={style.logoImage} src={require('./image/logo.png')} alt="logo" />
           </div>
 
-          {/* Блок со входом и регистрацией */}
+          {/* Блок со входом и регистрацией */} 
           <div className={style.login}>
             <div className={style.entry}><a href="">Вход</a></div>
             <div className={style.registr}><a href="">Регистрация</a></div>
@@ -98,49 +98,133 @@ const Header = () => {
 };
 
 const FlightTab = () => {
+  const cityOptions = ['Казань', 'Пекин'];
+  const flightTypeOptions = ['Чартер', 'Прямой', 'Транзит', 'Стыковочный'];
+  const classOptions = ['Эконом', 'Бизнес', 'Первый'];
+
+  const [route, setRoute] = useState({ from: '', to: '' });
+  const [flightType, setFlightType] = useState('');
+  const [passengers, setPassengers] = useState(1);
+  const [classType, setClassType] = useState('Эконом');
+  const [showPassengerModal, setShowPassengerModal] = useState(false);
+
+  const swapRoute = () => {
+    setRoute({ from: route.to, to: route.from });
+  };
+
+  const handleInputChange = (event, field) => {
+    setRoute({ ...route, [field]: event.target.value });
+  };
+
+
   const [dateRange, setDateRange] = useState([null, null]);
   const [startDate, endDate] = dateRange;
 
   return (
-    <div>
-      <form action='' method=''>
-        <label htmlFor="direction">Откуда-куда</label>
-        <input id="direction" type='text' name='direction'></input>
-        
-        <label htmlFor="type_of_trip">Тип рейса
-          <select>
-            <option>Чартер</option>
-            <option>Прямой</option>
-            <option>Транзит</option>
-            <option>Стыковочный</option>
-          </select>
-        </label>
-
-        <div>
-          <label htmlFor="date_range" className={style.dateR}>Дата рейса</label>
-          <DatePicker
-            id="date_range"
-            selectsRange
-            startDate={startDate}
-            endDate={endDate}
-            onChange={(update) => {
-              setDateRange(update);
-            }}
-            isClearable
-            placeholderText=""
+    <div className={style.headerForm}>
+      {/* Откуда-Куда */}
+      <div className={style.field}>
+        <p>Откуда-Куда</p>
+        <div className={style.placeForm}>
+          <input
+            type="text"
+            list="cities"
+            value={route.from}
+            onChange={(event) => handleInputChange(event, 'from')}
+            placeholder="Откуда"
           />
+          <span> - </span>
+          <input
+            type="text"
+            list="cities"
+            value={route.to}
+            onChange={(event) => handleInputChange(event, 'to')}
+            placeholder="Куда"
+          />
+          <button onClick={swapRoute}>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.25 2.25L19.5 7.5L14.25 12.75M18.697 7.5H4.5M9.75 21.75L4.5 16.5L9.75 11.25M5.34375 16.5H19.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <datalist id="cities">
+            {cityOptions.map((city, index) => (
+              <option key={index} value={city} />
+            ))}
+          </datalist>
         </div>
-        
-        <label htmlFor="type_of_trip">Тип рейса
-          <select>
-            <option>Чартер</option>
-            <option>Прямой</option>
-            <option>Транзит</option>
-            <option>Стыковочный</option>
-          </select>
-        </label>
+      </div>
 
-      </form>
+      {/* Тип рейса */}
+      <div className={style.field}>
+        <p>Тип рейса</p>
+        <div className={style.typeRaceForm}>
+          <select className={style.selectTypeRace} value={flightType} onChange={(e) => setFlightType(e.target.value)}>
+            <option value="" disabled>
+              Тип рейса
+            </option>
+            {flightTypeOptions.map((option, index) => (
+              <option key={index} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+        </div>
+      </div>
+
+      {/* Даты */}
+      <div className={style.field}>
+        <p>Туда-Обратно</p>
+        <div className={style.dateRaceForm}>
+          <div>
+            <DatePicker
+              id="date_range"
+              className={style.dateRaceForm}
+              selectsRange
+              startDate={startDate}
+              endDate={endDate}
+              onChange={(update) => {
+                setDateRange(update);
+              }}
+              isClearable
+              placeholderText="Выберите даты рейса"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Пассажиры */}
+      <div className={style.field}>
+        <p>Пассажиры - Класс</p>
+        <div className={style.personRaceForm}>
+          <button onClick={() => setShowPassengerModal(true)}>
+            {passengers} Пассажир(ы), {classType}
+          </button>
+          {showPassengerModal && (
+            <div className={style.modal}>
+              <div className={style.modalPassenger}>
+                <label>Пассажиры:</label>
+                <input
+                  type="number"
+                  value={passengers}
+                  onChange={(e) => setPassengers(e.target.value)}
+                  min="1"
+                />
+              </div>
+              <div className={style.modalClass}>
+                <label>Класс:</label>
+                <select value={classType} onChange={(e) => setClassType(e.target.value)}>
+                  {classOptions.map((option, index) => (
+                    <option key={index} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <button onClick={() => setShowPassengerModal(false)}>Закрыть</button>
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   );
 };
