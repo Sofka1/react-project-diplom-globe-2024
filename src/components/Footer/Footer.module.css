@@ -1,0 +1,70 @@
+.subscribe{
+    width: 1290px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    background-color: #CDEAE1;
+    border-radius: 20px;
+    height: 300px;
+}
+
+.forma{
+    width: auto;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+.image{
+    width: 100%;
+}
+
+.logoSub{
+    width: 300px;
+}
+
+.title_of_footer{
+    font-size: 40px;
+    color: #112211;
+    font-weight: 600;
+}
+
+.second_title{
+    color: #112211;
+    margin-top: 35px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.description_of_second_title{
+    color: #112211;
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.form_of_subscribe{
+    max-width: 450px;
+    margin: 35px 0 0 0;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.input_form{
+    border: none;
+    border-radius: 4px;
+    padding: 8px 0px 8px 16px;
+    width: 447px;
+    height: 25px;
+}
+
+.buttonSub{
+    border: none;
+    margin-left: 20px;
+    border-radius: 4px;
+    padding: 8px 16px;
+    width: 130px;
+    height: 43px;
+    background: #121;
+    color: white;
+}
