@@ -1,0 +1,352 @@
+.main {
+    max-width: 1440px;
+    margin: 276px auto 106px auto;
+}
+
+
+.headerBlock {
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.headerBlock .title{
+    margin: 0 auto 0 0;
+}
+
+.headerBlock h2 {
+    font-weight: 600;
+    font-size: 32px;
+    color: #000;
+
+    text-align: left;
+
+    margin-bottom: 16px;
+}
+
+.headerBlock p {
+    text-align: left;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+}
+
+.headerBlock button {
+    width: 150px;
+    border: 1px solid #8DD3BB;
+    border-radius: 4px;
+    padding: 8px 16px;
+    height: 40px;
+    background-color: #fff;
+
+    font-weight: 500;
+    font-size: 14px;
+    color: #121;
+
+    cursor: pointer;
+    margin: 0 0 0 0;
+}
+
+.headerBlock button:hover {
+    background-color: #8DD3BB;
+    font-weight: 600;
+}
+
+.mainMup {
+    margin-top: 24px;
+    position: relative;
+    height: 490px;
+}
+
+.mupImage {
+    position: absolute;
+    width: 1440px;
+    height: 486px;
+    background-repeat: no-repeat round;
+    background-position: initial;
+    background-image: url('./image/mup.png');
+
+    border-radius: 10px;
+    z-index: 0;
+}
+
+.point1 {
+    position: absolute;
+    top: 65px;
+    left: 320px;
+}
+
+.point2 {
+    position: absolute;
+    top: 285px;
+    left: 445px;
+}
+
+.point3 {
+    position: absolute;
+    top: 248px;
+    left: 757px;
+}
+
+.point4 {
+    position: absolute;
+    top: 100px;
+    left: 956px;
+}
+
+.point5 {
+    position: absolute;
+    top: 250px;
+    left: 1137px;
+}
+
+.pointArrow1 img {
+    width: 60px;
+    height: 30px;
+    margin: 6px 0 0 46px;
+}
+
+.pointArrow2 img {
+    width: 60px;
+    height: 30px;
+    margin: 6px 60px 0 0px;
+}
+
+.pointArrow3 img {
+    width: 60px;
+    height: 30px;
+    margin: 0px 90px 3px 0px;
+}
+
+.pointArrow4 img {
+    width: 60px;
+    height: 30px;
+    margin: 7px 90px 0px 0px;
+}
+
+.pointArrow5 img {
+    width: 60px;
+    height: 30px;
+    margin: 7px 90px 0px 0px;
+}
+
+.cartPoint {
+    background-color: #fff;
+
+    display: flex;
+    align-items: center;
+}
+
+.cartPoint img {
+    border-radius: 4px;
+}
+
+.cartPoint {
+    border-radius: 4px;
+    padding: 4px 8px 4px 4px;
+    height: 48px;
+}
+
+.cartTitle h5 {
+    font-weight: 700;
+    font-size: 10px;
+    color: #121;
+}
+
+.cartTitle p {
+    font-weight: 400;
+    font-size: 8px;
+    color: #121;
+}
+
+.cartWithCity {
+    margin: 80px 0 0 0;
+}
+
+
+/* с картой ебучей закончили, переходим к карточкам */
+.cytiGallery {
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    margin-top: 40px;
+}
+
+.cartCityMelbourne {
+    border-radius: 12px;
+    width: 240px;
+    height: 370px;
+
+    background-image: url('./image/city1.png');
+    background-repeat: no-repeat round;
+    background-position: initial;
+    background-size: 100%;
+
+    padding: 24px 24px 0 24px;
+}
+
+.cartCityParis {
+    border-radius: 12px;
+    width: 240px;
+    height: 370px;
+
+    background-image: url('./image/city2.png');
+    background-repeat: no-repeat round;
+    background-position: initial;
+    background-size: 100%;
+
+    padding: 24px 24px 0 24px;
+}
+
+.cartCityLondon {
+    border-radius: 12px;
+    width: 240px;
+    height: 370px;
+
+    background-image: url('./image/city3.png');
+    background-repeat: no-repeat round;
+    background-position: initial;
+    background-size: 100%;
+
+    padding: 24px 24px 0 24px;
+}
+
+.cartCityColombia {
+    border-radius: 12px;
+    width: 240px;
+    height: 370px;
+
+    background-image: url('./image/city4.png');
+    background-repeat: no-repeat round;
+    background-position: initial;
+    background-size: 100%;
+
+    padding: 24px 24px 0 24px;
+}
+
+.titleCityCart {
+    margin: 100% 0 0 0;
+}
+
+.titleCityCart h3 {
+    font-weight: 600;
+    font-size: 24px;
+    color: #fff;
+}
+
+.titleCityCart p {
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+}
+
+.titleCityCart button {
+    margin-top: 16px;
+    padding: 8px 16px;
+    width: 100%;
+    height: 48px;
+
+    background-color: #8DD3BB;
+    border: none;
+    border-radius: 4px;
+
+    font-weight: 500;
+    font-size: 14px;
+    color: #121;
+
+    cursor: pointer;
+}
+
+.titleCityCart button:hover {
+    background-color: #81c2ab;
+}
+
+
+/* tourBlock */
+.tourBlock {
+    margin:80px 0 0 0;
+    padding: 0;
+}
+
+.tourContent {
+    max-width: 1200px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+
+    margin-top: 24px;
+}
+
+.mainTextWithContent {
+    margin: 0;
+    border-radius: 20px;
+    padding: 24px;
+    width: 552px;
+    background-color: #8DD3BB;
+}
+
+.tourContentTitle {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+
+    margin-bottom: 40px;
+}
+
+.tourContentTitle h2 {
+    font-weight: 700;
+    font-size: 40px;
+    color: #121;
+}
+
+.tourPrice {
+    border-radius: 8px;
+    padding: 8px;
+    white-space: nowrap;
+    background: #fff;
+
+    font-weight: 600;
+    font-size: 20px;
+    color: #121;
+}
+
+.mainTextWithContent p {
+    font-weight: 400;
+    font-size: 14px;
+    color: #121;
+
+    margin-bottom: 65px;
+}
+
+.mainTextWithContent button {
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    width: 100%;
+    height: 48px;
+    background-color: #fff;
+
+    font-weight: 500;
+    font-size: 14px;
+    color: #121;
+}
+
+.galleryTour {
+    max-width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.imageTour img {
+    max-width: 280px;
+    border: 2px solid #8DD3BB;
+    border-radius: 15px;
+}

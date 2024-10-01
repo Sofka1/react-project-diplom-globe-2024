@@ -1,0 +1,12 @@
+/* ReviewCard.module.css */
+.stars {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 12px; /* Расстояние между звездами */
+  }
+  
+  .star {
+    display: inline-block;
+  }
+  

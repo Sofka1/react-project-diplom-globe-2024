@@ -1,42 +1,43 @@
-.main{
-    
+.main {
     max-width: 1440px;
-    margin-top: 150px;
+    margin-top: 230px;
 }
 
 /* HEADER */
 
-.header{
+.header {
     display: flex;
     align-items: start;
     justify-content: space-between;
 }
 
-.text_header{
+.text_header {
     width: 1050px;
     font-size: 28px;
     font-weight: 500;
 }
 
-.text_under_header{
+.text_under_header {
     margin-top: 16px;
     font-size: 16px;
 }
 
 /* ПЛАНИРОВАНИЕ */
 
-.button{
+.button {
     border: 1.5px #8DD3BB solid;
     background-color: white;
     border-radius: 4px;
     padding: 8px 16px;
     font-weight: 500;
     margin-top: 15px;
+
+    cursor: pointer;
 }
 
 /* БЛОК С КАРТОЧКАМИ СТРАН */
 
-.cards{
+.cards {
     margin-top: 20px;
     width: 1290px;
     display: grid;
@@ -49,7 +50,7 @@
     width: 300px;
     height: 80px;
     box-shadow: 0 4px 16px 0 rgba(17, 34, 17, 0.05);
-    border-radius: 10px; 
+    border-radius: 10px;
     background-color: white;
     padding: 16px;
     margin: 0;
@@ -59,41 +60,41 @@
     justify-content: space-between;
 }
 
-.location{
+.location {
     font-size: 14px;
     font-weight: 600;
     color: #112211;
 }
 
-.menu{
+.menu {
     margin-top: 7px;
     font-size: 14px;
     color: #112211;
 }
 
-.country img{
+.country img {
     height: 80px;
     width: 80px;
 }
 
-a{
+a {
     color: black;
     text-decoration: none;
 }
 
 /* БЛОК С ДВУМЯ ПЛАШКАМИ РЕЙСОВ И ОТЕЛЕЙ */
 
-.bloks{
+.bloks {
     display: flex;
     align-items: start;
-    justify-content: space-between; 
+    justify-content: space-between;
     margin-top: 80px;
-    width: 1370px;
+    max-width: 1370px;
     padding: 0;
     margin: 80px auto;
 }
 
-.trip{
+.trip {
     background-image: url('./images/trip.png');
     width: 604px;
     height: 559px;
@@ -101,13 +102,13 @@ a{
     text-align: center;
 }
 
-.hotel{
+.hotel {
     background-image: url('./images/hotel.png');
     width: 604px;
     height: 559px;
 }
 
-.naming{
+.naming {
     text-align: center;
     color: white;
     font-size: 40px;
@@ -115,7 +116,7 @@ a{
     margin-top: 380px;
 }
 
-.description_1{
+.description_1 {
     text-align: center;
     color: white;
     font-size: 16px;
@@ -123,7 +124,7 @@ a{
     margin-top: 8px;
 }
 
-.button_of_card{
+.button_of_card {
     padding: 10px 18px;
     background-color: #8DD3BB;
     border: none;
@@ -135,13 +136,180 @@ a{
     display: flex;
     align-items: start;
     justify-content: space-between;
+
+    cursor: pointer;
 }
 
-.button_of_card p{
+.button_of_card p {
     margin-left: 10px;
 }
 
-img{
+.trip_and_hotels img {
     width: 20px;
     height: 20px;
+}
+
+
+
+/* REVIEWS - ТО БИШЬ ОТЗЫВЫ НЕПОНИМАЮЩАЯ ПО АНГЛИЙСКИ ТЫ ФИГНЯ */
+.reviewsBlock {
+    max-width: 1300px;
+    margin: 70px auto;
+}
+
+.headerReviews {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 40px;
+}
+
+.title {
+    margin: 0;
+}
+
+.title h3 {
+    font-weight: 700;
+    font-size: 22px;
+    color: #121;
+
+    margin-bottom: 16px;
+}
+
+.title p {
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+}
+
+.showAllButton {
+    margin: auto 0;
+
+    border: 1px solid #8DD3BB;
+    border-radius: 4px;
+    padding: 8px 16px;
+    background-color: rgba(141, 211, 186, 0);
+
+    font-weight: 500;
+    font-size: 14px;
+    color: #121;
+
+    cursor: pointer;
+}
+
+.showAllButton:hover {
+    background-color: #8DD3BB;
+}
+
+
+
+.sliderContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.reviewsWrapper {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 100px;
+
+}
+
+.reviewCard {
+    max-width: 320px;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 2px 4px 16px 0 rgba(17, 34, 17, 0.1), 26px 26px 0 0 #cce9e0;
+    background: #fff;
+}
+
+.prevButton, .nextButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prevButton {
+    left: -50px;
+}
+
+.nextButton {
+    right: -50px;
+}
+
+.prevButton svg, .nextButton svg {
+    width: 43px;
+    height: 43px;
+}
+
+.textReviews {
+    font-weight: 600;
+    font-size: 14px;
+    color: #000;
+    opacity: 0.5;
+}
+
+.starsInReviews {
+    max-width: 200px;
+    margin: 16px 0 0 0;
+}
+
+
+
+
+.UserInfo {
+    margin-top: 20px;
+}
+
+.UserInfo h5 {
+    font-weight: 700;
+    font-size: 14px;
+    color: #121;
+}
+
+.UserInfo p {
+    margin-top: 4px;
+
+    font-weight: 500;
+    font-size: 12px;
+    color: #121;
+    opacity: 0.5;
+}
+
+.reviewsCompany {
+    margin: 12px 0 40px 0;
+    display: flex;
+    align-items: center;
+
+}
+
+.reviewsCompany img {
+    margin: 0 8px 0 0;
+}
+
+.reviewsCompany h5 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 12px;
+    color: #121;
+    opacity: 0.4;
+}
+
+.UserImageForReviews {
+    border-radius: 8px;
+}
+
+.UserImageForReviews .userImage{
+    max-width: 100%;
+    height: auto;
 }

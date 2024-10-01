@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import style from './Header.module.css'; // Импортируем CSS-модули
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
@@ -8,10 +8,10 @@ const Header = () => {
   const [activeTab, setActiveTab] = useState('flight');
 
   const renderContent = () => {
-    if (activeTab === 'flight') {
+    if (activeTab === 'flight') { 
       return <FlightTab />;
-    } else { 
-      return <HotelTab />; 
+    } else {
+      return <HotelTab />;
     }
   };
 
@@ -41,7 +41,7 @@ const Header = () => {
             <img className={style.logoImage} src={require('./image/logo.png')} alt="logo" />
           </div>
 
-          {/* Блок со входом и регистрацией */} 
+          {/* Блок со входом и регистрацией */}
           <div className={style.login}>
             <div className={style.entry}><a href="">Вход</a></div>
             <div className={style.registr}><a href="">Регистрация</a></div>
@@ -56,41 +56,50 @@ const Header = () => {
         </div>
 
       </div>
-      
+
       <div className={style.form}>
-      
-      {/*--- gpt ---*/}
-      <div className={style.tabContainer}>
-        <div className={style.tabButtons}>
-          <button
-            className={`${style.tabButton} ${activeTab === 'flight' ? style.active : ''}`}
-            onClick={() => setActiveTab('flight')}
-          >
-            <div className={style.click}>
-              <img className={style.iconSearch} src={require('./image/airplaneBlack.png')} alt="air"/>
-              <p>Рейс</p>
-            </div>
+        <div className={style.tabContainer}>
+          <div className={style.tabButtons}>
+            <button
+              className={`${style.tabButton} ${activeTab === 'flight' ? style.active : ''}`}
+              onClick={() => setActiveTab('flight')}
+            >
+              <div className={style.click}>
+                <img className={style.iconSearch} src={require('./image/airplaneBlack.png')} alt="air" />
+                <p>Рейс</p>
+              </div>
 
             </button>
 
-          <div className={style.decorBlock}></div>
-          <button
-            className={`${style.tabButton} ${activeTab === 'hotel' ? style.active : ''}`}
-            onClick={() => setActiveTab('hotel')}
-          >
-            <div className={style.click}>
-              <img className={style.iconSearch} src={require('./image/hotelBlack.png')} alt="hotel" />
-              <p>Отель</p>
-            </div>
-            
-          </button>
-        </div>
+            <div className={style.decorBlock}></div>
+            <button
+              className={`${style.tabButton} ${activeTab === 'hotel' ? style.active : ''}`}
+              onClick={() => setActiveTab('hotel')}
+            >
+              <div className={style.click}>
+                <img className={style.iconSearch} src={require('./image/hotelBlack.png')} alt="hotel" />
+                <p>Отель</p>
+              </div>
 
-        <div className={style.tabContent}>
-          {renderContent()}
+            </button>
+          </div>
+
+          <div className={style.tabContent}>
+            {renderContent()}
+          </div>
+
+          <div className={style.headerButton}>
+            <button className={style.certificat}>
+              <img src={require('./image/add.png')} alt="plane" />
+              <p>Добавить промокод</p>
+            </button>
+            <button>
+              <img src={require('./image/Plane.png')} alt="plane" />
+              <p>Показать</p>
+            </button>
+          </div>
         </div>
-      </div>
-      {/* ------ */}
+        {/* ------ */}
 
       </div>
     </header>
@@ -230,9 +239,156 @@ const FlightTab = () => {
 };
 
 const HotelTab = () => {
+  const destinationsList = [
+    'Париж',
+    'Лондон',
+    'Нью-Йорк',
+    'Токио',
+    'Берлин',
+    'Рим',
+    'Барселона',
+  ]; // Пример списка городов
+
+  const [selectedDestination, setSelectedDestination] = useState('');
+  const [isDestinationDropdownOpen, setIsDestinationDropdownOpen] = useState(false);
+  const [rooms, setRooms] = useState(1);
+  const [guests, setGuests] = useState(2);
+  const [isRoomsDropdownOpen, setIsRoomsDropdownOpen] = useState(false);
+
+  const [dateRange, setDateRange] = useState([null, null]);
+  const [startDate, endDate] = dateRange;
+
+  // Открытие и закрытие выпадающего списка для мест
+  const toggleDestinationDropdown = () => {
+    setIsDestinationDropdownOpen(!isDestinationDropdownOpen);
+  };
+
+  // Обработка выбора пункта назначения
+  const handleDestinationSelect = (destination) => {
+    setSelectedDestination(destination);
+    setIsDestinationDropdownOpen(false); // Закрытие списка после выбора
+  };
+
+  // Создаем ссылку на выпадающий блок для отслеживания кликов вне его
+  const dropdownRef = useRef(null);
+
+  // Обработчик кликов вне выпадающего блока
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsRoomsDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [dropdownRef]);
+
+  // Переименовали обработчики изменений
+  const onRoomsChange = (event) => {
+    setRooms(event.target.value);
+  };
+
+  const onGuestsChange = (event) => {
+    setGuests(event.target.value);
+  };
+
   return (
-  <div>Контент для отелей</div>
-);
+    <div className={style.hotelBooking}>
+      {/* Поле Место назначения с выпадающим списком */}
+      <div className={style.field}>
+        {/* <label htmlFor="destination" onClick={toggleDestinationDropdown}>
+          Место назначения
+        </label> */}
+        <p>Место назначения</p>
+        <div className={style.dropdown}>
+          <img src={require('./image/bed.png')} alt="" />
+          <div className={style.selectedValue} onClick={toggleDestinationDropdown}>
+            {selectedDestination || 'Выберите место назначения'}
+          </div>
+          {isDestinationDropdownOpen && (
+            <ul className={style.dropdownMenu}>
+              {destinationsList.map((destination, index) => (
+                <li
+                  key={index}
+                  className={style.dropdownItem}
+                  onClick={() => handleDestinationSelect(destination)}
+                >
+                  {destination}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </div>
+
+      {/* Даты */}
+      <div className={style.field}>
+        <p>Туда-Обратно</p>
+        <div className={style.dateHotelBlock}>
+          <img src={require('./image/calendar.png')} alt="" />
+          <div>
+            <DatePicker
+              id="date_range"
+              className={style.dateHotelForm}
+              selectsRange
+              startDate={startDate}
+              endDate={endDate}
+              onChange={(update) => {
+                setDateRange(update);
+              }}
+              isClearable
+              placeholderText="Выберите даты рейса"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Выпадающий список Комната & Гости */}
+      <div className={style.field}>
+        <p>Комната & Гости</p>
+        <div className={style.roomBlock}>
+          <img src={require('./image/User.png')} alt="" />
+          <label
+            onClick={() => setIsRoomsDropdownOpen(!isRoomsDropdownOpen)}
+            className={style.roomMenu}
+          >
+            {rooms} комната{rooms > 1 ? 'ы' : ''}, {guests} гост{guests > 1 ? 'я' : 'ь'}
+          </label>
+
+          {isRoomsDropdownOpen && (
+            <div className={style.dropdownContent} ref={dropdownRef}>
+              <div className={style.dropdownItem}>
+                <label>Количество комнат</label>
+                <input
+                  type="number"
+                  value={rooms}
+                  onChange={onRoomsChange} // Используем переименованный обработчик
+                  min="1"
+                  max="10"
+                  className={style.input}
+                />
+              </div>
+              <div className={style.dropdownItem}>
+                <label>Количество гостей</label>
+                <input
+                  type="number"
+                  value={guests}
+                  onChange={onGuestsChange} // Используем переименованный обработчик
+                  min="1"
+                  max="10"
+                  className={style.input}
+                />
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+
+    </div>
+  );
 };
 
 export default Header;

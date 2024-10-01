@@ -1,0 +1,508 @@
+.headerMain {
+  width: 1440px;
+  height: 599px;
+  padding: 0 0;
+  margin: 0 auto;
+
+  background-image: url('./image/fonImage.png');
+  background-repeat: no-repeat round;
+  background-position: initial;
+  border-radius: 10px;
+
+}
+
+.header {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 26px 104px;
+  margin-bottom: 50px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.searchTrip,
+.searchHotel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.searchTrip {
+  margin-right: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.searchTitle {
+  margin-bottom: 6.5px;
+}
+
+.searchTitle a {
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.iconSearch {
+  width: 24px;
+  height: 24px;
+
+  margin-right: 5px;
+}
+
+
+
+.logoImage {
+  width: 130px;
+  height: auto;
+}
+
+
+
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.entry {
+  margin-right: 32px;
+}
+
+.entry a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+}
+
+.registr a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+
+  padding: 15px 24px;
+  background-color: #112211;
+  border-radius: 8px;
+}
+
+
+.title {
+  margin: 0 126px;
+  text-align: left;
+  padding: 54px 0 155px 0;
+}
+
+.title h2 {
+  font-weight: 700;
+  font-size: 45px;
+  text-align: left;
+  color: #fff;
+}
+
+.title h1 {
+  font-weight: 700;
+  font-size: 80px;
+  text-transform: uppercase;
+  text-align: left;
+  color: #fff;
+
+  margin-top: 4px;
+}
+
+.title p {
+  font-weight: 500;
+  font-size: 20px;
+  text-align: left;
+  color: #fff;
+
+  margin-top: 16px;
+}
+
+
+/* ФОРМА БЛЯ ЕБУЧАЯ */
+.form {
+  width: 1232px;
+  padding: 16px 32px 32px 32px;
+
+  box-shadow: 0 4px 16px 0 rgba(141, 211, 187, 0.15);
+  background: #fff;
+  border-radius: 16px;
+}
+
+.decorBlock {
+  border: 1px solid #d7e2ee;
+  width: 0px;
+  height: 48px;
+}
+
+
+.tabContainer {
+  width: 100%;
+}
+
+.click {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.tabButtons {
+  margin-left: 0;
+  width: 300px;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.tabButton {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+}
+
+.tabButton.active {
+  font-weight: bold;
+}
+
+.tabButton.active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #8DD3BB;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.dateR {
+  background-color: red;
+  max-width: 400px;
+}
+
+
+
+
+
+.headerForm {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.field {
+  position: relative;
+  border: 1px solid #79747e;
+  border-radius: 4px;
+  padding: 18px 16px;
+}
+
+.field p {
+  position: absolute;
+  top: -10px;
+  padding: 0 5px;
+  display: inline-block;
+  background-color: #ffffff;
+
+  font-weight: 400;
+  font-size: 14px;
+  color: #121;
+}
+
+.placeForm {
+  width: 324px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+}
+
+input[list="cities"]::-webkit-calendar-picker-indicator {
+  display: none !important;
+}
+
+.placeForm input {
+  border: none;
+  width: 100px;
+
+  font-weight: 400;
+  font-size: 16px;
+  color: #1c1b1f;
+  padding-left: 5px;
+
+  outline: none;
+}
+
+.placeForm span {
+  margin: 0 10px 0 0;
+}
+
+.placeForm button {
+  width: 30px;
+  border: none;
+  background-color: #ff000000;
+  cursor: pointer;
+}
+
+.typeRaceForm {
+  width: 140px;
+
+}
+
+
+.dateRaceForm {
+  width: 250px;
+}
+
+.selectTypeRace {
+  border: none;
+  font-weight: 400;
+  font-size: 16px;
+  color: #1c1b1f;
+
+  outline: none;
+}
+
+.dateRaceForm {
+  border: none;
+  font-weight: 400;
+  font-size: 16px;
+  color: #1c1b1f;
+
+  outline: none;
+}
+
+.personRaceForm {
+  width: 324px;
+}
+
+.personRaceForm button {
+  border: none;
+  background-color: #79747e00;
+  font-weight: 400;
+  font-size: 16px;
+  color: #1c1b1f;
+
+  cursor: pointer;
+}
+
+
+
+.modal {
+  position: absolute;
+  background: white;
+  border: 1px solid #79747e;
+  border-radius: 10px;
+  padding: 20px 30px;
+  z-index: 1000;
+}
+
+.modalPassenger {
+  margin-bottom: 10px;
+
+}
+
+.modalPassenger label {
+  font-weight: 400;
+  font-size: 16px;
+  color: #1c1b1f;
+  margin-right: 10px;
+}
+
+.modalPassenger input {
+  max-width: 40px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #79747e;
+  outline: none;
+}
+
+.modalClass label {
+  font-weight: 400;
+  font-size: 16px;
+  color: #1c1b1f;
+  margin-right: 10px;
+}
+
+.modalClass select {
+  max-width: 200px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #79747e;
+  outline: none;
+}
+
+.modal button {
+  margin: 10px auto 0 auto;
+  background-color: #8DD3BB;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+
+/* отели */
+
+.hotelBooking {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+.dropdown {
+  position: relative;
+  display: flex;
+}
+
+.field img {
+  width: 24px;
+  margin-right: 12px;
+}
+
+.selectedValue {
+  width: 352px;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+}
+
+.dropdownMenu {
+  position: absolute;
+  z-index: 10;
+  background-color: white;
+  border: 1px solid #ccc;
+  width: 100%;
+
+  list-style: none;
+}
+
+.roomBlock {
+  display: flex;
+  align-items: center;
+}
+
+.roomMenu {
+  width: 300px;
+  cursor: pointer;
+}
+
+.dropdownItem {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdownItem:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdownItem label {
+  margin-right: 20px;
+}
+
+.dateHotelBlock {
+  width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dateHotelForm {
+  width: 230px;
+  border: none;
+  font-weight: 400;
+  font-size: 16px;
+  color: #1c1b1f;
+
+  outline: none;
+}
+
+.dropdownContent {
+  position: absolute;
+  z-index: 10;
+  background-color: white;
+  border: 1px solid #79747E;
+  width: 100%;
+
+  border-radius: 10px;
+}
+
+
+/* кнопки внизу */
+
+.headerButton {
+  width: max-content;
+  margin-right: 0;
+  display: flex;
+  gap: 24px;
+}
+
+.headerButton button {
+  width: max-content;
+  border-radius: 4px;
+  padding: 16px;
+  border: none;
+
+  background-color: #8DD3BB;
+
+  display: flex;
+  align-items: center;
+  justify-content: left;
+
+  margin-right: 0;
+
+  cursor: pointer;
+}
+
+.headerButton button:hover {
+  background-color: #82CBB2;
+}
+
+.headerButton .certificat {
+  width: max-content;
+  border-radius: 4px;
+  padding: 16px;
+  border: none;
+
+  background-color: rgb(255, 255, 255);
+
+  display: flex;
+  align-items: center;
+  justify-content: left;
+
+  margin-right: 0;
+
+  cursor: pointer;
+}
+
+.headerButton .certificat:hover {
+  background-color: #fff;
+}
+
+.headerButton button img {
+  max-width: 16px;
+  margin-right: 4px;
+}
+
+.headerButton button p {
+  font-weight: 500;
+  font-size: 14px;
+  color: #121;
+}

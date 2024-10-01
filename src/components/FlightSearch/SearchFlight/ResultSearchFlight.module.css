@@ -1,0 +1,455 @@
+.main {
+    max-width: 1440px;
+    margin: auto;
+    padding: 0;
+}
+
+.headerFilters {
+    border-radius: 16px;
+    padding: 32px 24px;
+    box-shadow: 0 4px 16px 0 rgba(17, 34, 17, 0.05);
+    background: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* настройки для формы ебанной */
+.headerForm {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.field {
+    position: relative;
+    border: 1px solid #79747e;
+    border-radius: 4px;
+    padding: 18px 16px;
+}
+
+.field p {
+    position: absolute;
+    top: -10px;
+    padding: 0 5px;
+    display: inline-block;
+    background-color: #ffffff;
+
+    font-weight: 400;
+    font-size: 14px;
+    color: #121;
+}
+
+.placeForm {
+    width: 324px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+}
+
+input[list="cities"]::-webkit-calendar-picker-indicator {
+    display: none !important;
+}
+
+.placeForm input {
+    border: none;
+    width: 100px;
+
+    font-weight: 400;
+    font-size: 16px;
+    color: #1c1b1f;
+    padding-left: 5px;
+
+    outline: none;
+}
+
+.placeForm span {
+    margin: 0 10px 0 0;
+}
+
+.placeForm button {
+    width: 30px;
+    border: none;
+    background-color: #ff000000;
+    cursor: pointer;
+}
+
+.typeRaceForm {
+    width: 140px;
+
+}
+
+.dateRaceForm {
+    width: 250px;
+}
+
+.selectTypeRace {
+    border: none;
+    font-weight: 400;
+    font-size: 16px;
+    color: #1c1b1f;
+
+    outline: none;
+}
+
+.dateRaceForm {
+    border: none;
+    font-weight: 400;
+    font-size: 16px;
+    color: #1c1b1f;
+
+    outline: none;
+}
+
+.personRaceForm {
+    width: 324px;
+}
+
+.personRaceForm button {
+    border: none;
+    background-color: #79747e00;
+    font-weight: 400;
+    font-size: 16px;
+    color: #1c1b1f;
+
+    cursor: pointer;
+}
+
+.modal {
+    position: absolute;
+    background: white;
+    border: 1px solid #79747e;
+    border-radius: 10px;
+    padding: 20px 30px;
+    z-index: 1000;
+}
+
+.modalPassenger {
+    margin-bottom: 10px;
+
+}
+
+.modalPassenger label {
+    font-weight: 400;
+    font-size: 16px;
+    color: #1c1b1f;
+    margin-right: 10px;
+}
+
+.modalPassenger input {
+    max-width: 40px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #79747e;
+    outline: none;
+}
+
+.modalClass label {
+    font-weight: 400;
+    font-size: 16px;
+    color: #1c1b1f;
+    margin-right: 10px;
+}
+
+.modalClass select {
+    max-width: 200px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #79747e;
+    outline: none;
+}
+
+.modal button {
+    margin: 10px auto 0 auto;
+    background-color: #8DD3BB;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+
+/* ЕБАТОРИЯЯЯЯЯЯЯ */
+.mainContent {
+    width: 1440px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 32px auto 0 auto;
+    padding: 0;
+}
+
+/* filters */
+/* Основной блок с фильтрами */
+.flightFilters {
+    width: 300px;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    margin: 0;
+}
+
+.flightFilters h3 {
+    font-weight: 600;
+    font-size: 20px;
+    color: #121;
+
+    margin-bottom: 32px;
+}
+
+/* Заголовок каждого фильтра */
+.flightFilters h4 {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.flightFilters h4 p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Иконка-стрелка для открытия/закрытия фильтра */
+.flightFilters h4 svg {
+    transition: transform 0.3s ease;
+}
+
+.flightFilters h4 svg.open {
+    transform: rotate(180deg);
+}
+
+/* Ползунки */
+.flightFilters .ant-slider {
+    margin: 10px 0;
+}
+
+/* Отделительная линия между фильтрами */
+.decorLine {
+    height: 1px;
+    background-color: #ddd;
+    margin: 20px 0;
+}
+
+/* Блок с рейтингом (кнопки) */
+.ratingOptions button {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    margin-right: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.ratingOptions button:hover {
+    background-color: #e6e6e6;
+}
+
+.ratingOptions button:focus {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Чекбоксы для авиакомпаний и типов поездок */
+.checkboxOptions label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.checkboxOptions input {
+    margin-right: 8px;
+}
+
+
+/* results */
+/* Основной блок для карточек рейсов */
+.flightResults {
+    max-width: 840px;
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* Блок для выбора класса (дешевый, лучший, быстрый) */
+.classSelection {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    border-radius: 12px;
+    padding: 16px 24px;
+    box-shadow: 0 4px 16px 0 rgba(17, 34, 17, 0.05);
+    background: #fff;
+}
+
+.classOption {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.classOption:hover {
+    background-color: #0056b3;
+}
+
+/* Информация о результатах (количество рейсов, сортировка) */
+.resultsInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.resultsInfo span {
+    font-size: 14px;
+    color: #555;
+}
+
+.sortBy {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sortBy span {
+    margin-right: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Карточки рейсов */
+.flightCards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+.flightCard {
+    border-radius: 12px;
+    padding: 24px 16px;
+    width: 840px;
+    height: 286px;
+
+    box-shadow: 0 4px 16px 0 rgba(17, 34, 17, 0.05);
+    background: #FFF;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+
+    transition: transform 0.3s ease;
+}
+
+.flightCard:hover {
+    transform: translateY(-5px);
+}
+
+.flightCard img{
+    width: 160px;
+    margin: 0;
+}
+
+.flightCard .cardContent{
+    margin: 0;
+    padding: 0 0 0 24px;
+}
+
+.headerflightCard{
+    width: 100%;
+    margin: 0 0 16px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.ratingflightCard{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.ratingflightCard p{
+    border: 1px solid #8DD3BB;
+    border-radius: 4px;
+    padding: 8px 16px;
+
+    font-weight: 500;
+    font-size: 12px;
+    color: #121;
+}
+
+.ratingflightCard a{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 12px;
+    color: #121;
+}
+
+.priceflightCard{
+    margin: 0 0 0 270px;
+    padding: 0;
+}
+
+.priceflightCard p{
+    font-weight: 500;
+    font-size: 12px;
+    color: #121;
+    opacity: 0.75;
+
+    text-align: right;
+}
+
+.priceflightCard h6{
+    font-weight: 700;
+    font-size: 24px;
+    text-align: right;
+    color: #ff8682;
+}
+
+
+/* Пагинация */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 10px;
+}
+
+.pagination button:hover {
+    background-color: #0056b3;
+}
+
+.pagination span {
+    font-size: 14px;
+    color: #333;
+}
+
+
+.sortSelect {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+}

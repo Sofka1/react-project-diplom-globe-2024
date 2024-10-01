@@ -1,0 +1,86 @@
+.header {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 16px 0 rgba(17, 34, 17, 0.05);
+  padding: 26px 104px;
+  margin-bottom: 50px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.searchTrip,
+.searchHotel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.searchTrip {
+  margin-right: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.searchTitle {
+  margin-bottom: 6.5px;
+}
+
+.searchTitle a {
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.iconSearch {
+  width: 24px;
+  height: 24px;
+
+  margin-right: 5px;
+}
+
+
+
+.logoImage {
+  width: 130px;
+  height: auto;
+}
+
+
+
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.entry {
+  margin-right: 32px;
+}
+
+.entry a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+}
+
+.registr a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+
+  padding: 15px 24px;
+  background-color: #112211;
+  border-radius: 8px;
+}

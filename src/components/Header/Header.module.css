@@ -1,13 +1,11 @@
-.headerMain{
+.headerMain {
   width: 1380px;
   height: 599px;
   border-radius: 24px;
-
-  background: #ffffff; 
   padding: 0 0;
   margin: auto;
 
-  background-image: url('./image/fonImage.png'); 
+  background-image: url('./image/fonImage.png');
   background-repeat: no-repeat round;
   background-position: initial;
 
@@ -15,50 +13,50 @@
 
 }
 
-.mainBlock{
+.mainBlock {
   color: #ffffff;
   padding: 24px 32px;
   margin-top: 30px;
 }
 
-.header{
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.search{
-    display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.searchTrip, .searchHotel{
+.search {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.searchTrip{
+.searchTrip, .searchHotel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.searchTrip {
   margin-right: 32px;
-  
+
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.searchTitle{
+.searchTitle {
   margin-bottom: 6.5px;
 }
 
-.searchTitle a{
+.searchTitle a {
   font-weight: 600;
   font-size: 14px;
   text-decoration: none;
   color: #fff;
 }
 
-.iconSearch{
+.iconSearch {
   width: 24px;
   height: 24px;
 
@@ -67,30 +65,31 @@
 
 
 
-.logoImage{
+.logoImage {
   width: 130px;
+  height: auto;
 }
 
 
 
-.login{
+.login {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.entry{
+.entry {
   margin-right: 32px;
 }
 
-.entry a{
+.entry a {
   text-decoration: none;
   font-weight: 600;
   font-size: 14px;
   color: #fff;
 }
 
-.registr a{
+.registr a {
   text-decoration: none;
   font-weight: 600;
   font-size: 14px;
@@ -103,20 +102,20 @@
 }
 
 
-.title{
+.title {
   margin: auto;
   text-align: center;
   padding: 54px 0 155px 0;
 }
 
-.title h2{
+.title h2 {
   font-weight: 700;
   font-size: 45px;
   text-align: center;
   color: #fff;
 }
 
-.title h1{
+.title h1 {
   font-weight: 700;
   font-size: 80px;
   text-transform: uppercase;
@@ -126,7 +125,7 @@
   margin-top: 4px;
 }
 
-.title p{
+.title p {
   font-weight: 600;
   font-size: 20px;
   text-align: center;
@@ -137,7 +136,7 @@
 
 
 /* ФОРМА БЛЯ ЕБУЧАЯ */
-.form{
+.form {
   width: 1232px;
   padding: 16px 32px 32px 32px;
 
@@ -146,7 +145,7 @@
   border-radius: 16px;
 }
 
-.decorBlock{
+.decorBlock {
   border: 1px solid #d7e2ee;
   width: 0px;
   height: 48px;
@@ -157,7 +156,7 @@
   width: 100%;
 }
 
-.click{
+.click {
   display: flex;
   align-items: center;
   justify-content: left;
@@ -194,9 +193,9 @@
   left: 0;
 }
 
-.dateR{
+.dateR {
   background-color: red;
-  max-width: 400px; 
+  max-width: 400px;
 }
 
 
@@ -217,9 +216,9 @@
   padding: 18px 16px;
 }
 
-.field p{
+.field p {
   position: absolute;
-  top:-10px;
+  top: -10px;
   padding: 0 5px;
   display: inline-block;
   background-color: #ffffff;
@@ -229,7 +228,7 @@
   color: #121;
 }
 
-.placeForm{
+.placeForm {
   width: 324px;
   height: 22px;
   display: flex;
@@ -240,7 +239,7 @@ input[list="cities"]::-webkit-calendar-picker-indicator {
   display: none !important;
 }
 
-.placeForm input{
+.placeForm input {
   border: none;
   width: 100px;
 
@@ -249,53 +248,53 @@ input[list="cities"]::-webkit-calendar-picker-indicator {
   color: #1c1b1f;
   padding-left: 5px;
 
-  outline:none;
+  outline: none;
 }
 
-.placeForm span{
+.placeForm span {
   margin: 0 10px 0 0;
 }
 
-.placeForm button{
+.placeForm button {
   width: 30px;
   border: none;
   background-color: #ff000000;
   cursor: pointer;
 }
 
-.typeRaceForm{
+.typeRaceForm {
   width: 140px;
-  
+
 }
 
 
-.dateRaceForm{
+.dateRaceForm {
   width: 250px;
 }
 
-.selectTypeRace{
+.selectTypeRace {
   border: none;
   font-weight: 400;
   font-size: 16px;
   color: #1c1b1f;
 
-  outline:none;
+  outline: none;
 }
 
-.dateRaceForm{
+.dateRaceForm {
   border: none;
   font-weight: 400;
   font-size: 16px;
   color: #1c1b1f;
 
-  outline:none;
+  outline: none;
 }
 
-.personRaceForm{
+.personRaceForm {
   width: 324px;
 }
 
-.personRaceForm button{
+.personRaceForm button {
   border: none;
   background-color: #79747e00;
   font-weight: 400;
@@ -316,44 +315,197 @@ input[list="cities"]::-webkit-calendar-picker-indicator {
   z-index: 1000;
 }
 
-.modalPassenger{
+.modalPassenger {
   margin-bottom: 10px;
-  
+
 }
 
-.modalPassenger label{
+.modalPassenger label {
   font-weight: 400;
   font-size: 16px;
   color: #1c1b1f;
   margin-right: 10px;
 }
 
-.modalPassenger input{
+.modalPassenger input {
   max-width: 40px;
   padding: 5px 10px;
   border-radius: 5px;
   border: 1px solid #79747e;
-  outline:none;
+  outline: none;
 }
 
-.modalClass label{
+.modalClass label {
   font-weight: 400;
   font-size: 16px;
   color: #1c1b1f;
   margin-right: 10px;
 }
 
-.modalClass select{
+.modalClass select {
   max-width: 200px;
   padding: 5px 10px;
   border-radius: 5px;
   border: 1px solid #79747e;
-  outline:none;
+  outline: none;
 }
 
-.modal button{
+.modal button {
   margin: 10px auto 0 auto;
   background-color: #8DD3BB;
   padding: 5px 10px;
   border-radius: 5px;
+}
+
+
+/* отели */
+
+.hotelBooking {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+.dropdown {
+  position: relative;
+  display: flex;
+}
+
+.field img {
+  width: 24px;
+  margin-right: 12px;
+}
+
+.selectedValue {
+  width: 352px;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+}
+
+.dropdownMenu {
+  position: absolute;
+  z-index: 10;
+  background-color: white;
+  border: 1px solid #ccc;
+  width: 100%;
+
+  list-style: none;
+}
+
+.roomBlock{
+  display: flex;
+  align-items: center;
+}
+
+.roomMenu{
+  width: 300px;
+  cursor: pointer;
+}
+
+.dropdownItem {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdownItem:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdownItem label{
+  margin-right: 20px;
+}
+
+.dateHotelBlock {
+  width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dateHotelForm {
+  width: 230px;
+  border: none;
+  font-weight: 400;
+  font-size: 16px;
+  color: #1c1b1f;
+
+  outline: none;
+}
+
+.dropdownContent{
+  position: absolute;
+  z-index: 10;
+  background-color: white;
+  border: 1px solid #79747E;
+  width: 100%;
+
+  border-radius: 10px;
+}
+
+
+/* кнопки внизу */
+
+.headerButton {
+  width: max-content;
+  margin-right: 0;
+  display: flex;
+  gap: 24px;
+}
+
+.headerButton button {
+  width: max-content;
+  border-radius: 4px;
+  padding: 16px;
+  border: none;
+
+  background-color: #8DD3BB;
+
+  display: flex;
+  align-items: center;
+  justify-content: left;
+
+  margin-right: 0;
+
+  cursor: pointer;
+}
+
+.headerButton button:hover {
+  background-color: #82CBB2;
+}
+
+.headerButton .certificat {
+  width: max-content;
+  border-radius: 4px;
+  padding: 16px;
+  border: none;
+
+  background-color: rgb(255, 255, 255);
+
+  display: flex;
+  align-items: center;
+  justify-content: left;
+
+  margin-right: 0;
+
+  cursor: pointer;
+}
+
+.headerButton .certificat:hover {
+  background-color: #fff;
+}
+
+.headerButton button img {
+  max-width: 16px;
+  margin-right: 4px;
+}
+
+.headerButton button p {
+  font-weight: 500;
+  font-size: 14px;
+  color: #121;
 }
